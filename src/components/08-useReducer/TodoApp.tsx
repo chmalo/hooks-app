@@ -3,16 +3,11 @@ import { useEffect, useReducer } from "react"
 import { todoReducer } from "./todoReducer"
 import { TodoList } from "./TodoList"
 import { TodoAdd } from "./TodoAdd"
+import { Todos } from "./Todos"
 
 const init = () => {
   // @ts-ignore
   return JSON.parse(localStorage.getItem("todos")) || []
-}
-
-interface Todos {
-  id: number
-  desc: string
-  done: boolean
 }
 
 export const TodoApp = () => {

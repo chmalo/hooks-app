@@ -1,10 +1,12 @@
+import { Todos } from "./Todos"
+
 export const TodoListItem = ({
   todo,
   index,
   handleToggle,
   handleDelete,
 }: {
-  todo: any
+  todo: Todos
   index: number
   handleToggle: any
   handleDelete: any
