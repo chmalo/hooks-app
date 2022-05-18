@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom"
 // import HooksApp from "./HooksApp"
 // import { CounterApp } from "./components/01-useState/CounterApp"
 // import { CounterWithCustomHook } from "./components/01-useState/CounterWithCustomHook"
@@ -15,5 +14,11 @@ import ReactDOM from "react-dom"
 // import { Padre } from "./components/07-tarea-memo/Padre"
 // import { TodoApp } from "./components/08-useReducer/TodoApp"
 import { MainApp } from "./components/09-useContext/MainApp"
+import {createRoot} from "react-dom/client";
 
-ReactDOM.render(<MainApp />, document.getElementById("root"))
+const container = document.getElementById("root");
+const root = createRoot(container!);
+
+root.render(<MainApp />);
+
+

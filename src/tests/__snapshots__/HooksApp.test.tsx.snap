@@ -1,0 +1,11 @@
+// Vitest Snapshot v1
+
+exports[`Testing <HooksApp/> > it should show correctly <App/> component 1`] = `
+<div>
+  <div>
+    <h1>
+      Hola mundo
+    </h1>
+  </div>
+</div>
+`;

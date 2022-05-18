@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import axios from "axios";
 
 export const useFetch = (url: string) => {
   const isMounted = useRef(true)
@@ -12,19 +13,22 @@ export const useFetch = (url: string) => {
 
   useEffect(() => {
     setState({ data: null, loading: true, error: null })
-    fetch(url)
-      .then((resp) => resp.json())
+
+    axios(url)
+      .then((resp) => resp.data)
       .then((data) => {
-        if (isMounted.current) {
-          setState({
-            loading: false,
-            error: null,
-            data,
-          })
-        } else {
-          console.log("setState no se llamo")
-        }
-      })
+        isMounted.current && setState({
+          loading: false,
+          error: null,
+          data,
+        });
+      }).catch(() => {
+        setState({
+          data: null,
+          loading: false,
+          error: 'No se pudo cargar la info'
+        })
+    })
   }, [url])
 
   return state
