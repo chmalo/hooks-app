@@ -26,7 +26,7 @@ describe("Testing hook useFetch", () => {
 
     test("it should handle the error", async () => {
         const {result, waitForNextUpdate} = renderHook(() => useFetch('https://reqres.in/apid/users?page=2'))
-        await waitForNextUpdate({ timeout: 2000 })
+        await waitForNextUpdate({ timeout: 5000 })
         const {data, loading, error} = result.current;
 
         expect(data).toBe(null);

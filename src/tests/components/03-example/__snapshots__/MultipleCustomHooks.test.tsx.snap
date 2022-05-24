@@ -1,0 +1,22 @@
+// Vitest Snapshot v1
+
+exports[`Testing in MultipleCustomHooks > it should show correctly 1`] = `
+<div>
+  <div>
+    <h1>
+      BreakibgBad Quotes
+    </h1>
+    <hr />
+    <div
+      class="alert alert-info text-center"
+    >
+      Loading...
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      siguiente quote
+    </button>
+  </div>
+</div>
+`;
